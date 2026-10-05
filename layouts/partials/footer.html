@@ -144,10 +144,11 @@
         {{ end }}
         <!-------------- Newsletter --------------->
         {{ if $newsletterEnabled }}
-          {{ $provider := site.Params.footer.newsletter.provider }}
+          {{ $newsletter := site.Params.footer.newsletter }}
+          {{ $provider := $newsletter.provider | default "netlify" }}
           <div class="col-md-4 col-sm-12">
             <p>{{ i18n "newsletter_text" }}</p>
-            {{ if and (eq $provider "mailchimp") site.Params.footer.newsletter.mailchimpURL }}  <!-- mailchimp -->
+            {{ if and (eq $provider "mailchimp") $newsletter.mailchimpURL }}  <!-- mailchimp -->
               <form
                 action="{{ site.Params.footer.newsletter.mailchimpURL }}"
                 method="post"
@@ -171,15 +172,56 @@
                 </div>
                 <button type="submit" class="btn btn-info">{{ i18n "submit" }}</button>
               </form>
-            {{ else }}
-              <form method='post' action='https://blogtrottr.com'>
-              <div class="form-group">
-              <input type='email' class="form-control" name='btr_email' placeholder="{{ i18n "newsletter_input_placeholder" }}"/><br />
-              <input type='hidden' name='btr_url' value='{{ "" | absLangURL }}/index.xml' />
-              <input type='hidden' name='schedule_type' value='1' />
-              <small id="emailHelp" class="form-text text-muted">{{ i18n "newsletter_warning" }}</small>
-              <button type="submit" class="btn btn-info"> {{ i18n "submit" }} </button>
-              </div>
+            {{ else if eq $provider "netlify" }}  <!-- netlify -->
+              {{ $formName := $newsletter.formName | default "newsletter" }}
+              <form
+                name="{{ $formName }}"
+                method="post"
+                action="{{ $newsletter.action | default ("" | absLangURL) }}"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                novalidate>
+                <div class="form-group">
+                  <input type="hidden" name="form-name" value="{{ $formName }}" />
+                  <label class="sr-only" for="newsletter-email">{{ i18n "newsletter_input_placeholder" }}</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="newsletter-email"
+                    name="email"
+                    required
+                    aria-describedby="emailHelp"
+                    placeholder="{{ i18n "newsletter_input_placeholder" }}"
+                  />
+                  <p class="visually-hidden" aria-hidden="true">
+                    <input name="bot-field" tabindex="-1" autocomplete="off" />
+                  </p>
+                  <small id="emailHelp" class="form-text text-muted">{{ i18n "newsletter_warning" }}</small>
+                </div>
+                <button type="submit" class="btn btn-info">{{ i18n "submit" }}</button>
+              </form>
+            {{ else if and (eq $provider "custom") $newsletter.action }}  <!-- custom endpoint -->
+              <form
+                method="{{ $newsletter.method | default "post" }}"
+                action="{{ $newsletter.action }}"
+                {{ if $newsletter.newTab }} target="_blank"{{ end }}>
+                <div class="form-group">
+                  <label class="sr-only" for="newsletter-email">{{ i18n "newsletter_input_placeholder" }}</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="newsletter-email"
+                    name="{{ $newsletter.fieldName | default "email" }}"
+                    required
+                    aria-describedby="emailHelp"
+                    placeholder="{{ i18n "newsletter_input_placeholder" }}"
+                  />
+                  {{ range $newsletter.hidden }}
+                    <input type="hidden" name="{{ .name }}" value="{{ .value }}" />
+                  {{ end }}
+                  <small id="emailHelp" class="form-text text-muted">{{ i18n "newsletter_warning" }}</small>
+                </div>
+                <button type="submit" class="btn btn-info">{{ i18n "submit" }}</button>
               </form>
             {{ end }}
           </div>

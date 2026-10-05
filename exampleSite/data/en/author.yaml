@@ -1,0 +1,21 @@
+# some information about you
+name: "Md. Anas Mondol"
+nickname: "Anas"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/Md. Anas Mondol.jpg"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "mdanasmondol43@gmail.com"
+  phone: "+880-179217-0982"
+
+# some summary about what you do
+summary:
+  - I am a Software Engineer
+  - I am a passionate about AI and Software Engineering
+  - I work on open-source projects
+  - I love to work with some fun projects
+  - I am a lifelong learner and always eager to explore new technologies
+  - I am a team player and love to collaborate with others
+  - I am a problem solver and love to tackle challenging problems
+

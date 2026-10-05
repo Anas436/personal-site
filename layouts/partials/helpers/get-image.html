@@ -1,0 +1,13 @@
+{{ $url := "" }}
+{{ $resource := "" }}
+{{ with . }}
+  {{ if or (hasPrefix . "http://") (hasPrefix . "https://") (hasPrefix . "//") (hasPrefix . "data:") }}
+    {{ $url = . }}
+  {{ else }}
+    {{ with resources.Get . }}
+      {{ $url = .RelPermalink }}
+      {{ $resource = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return dict "url" $url "resource" $resource }}

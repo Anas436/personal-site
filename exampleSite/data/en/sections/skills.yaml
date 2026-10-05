@@ -1,0 +1,76 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  filter: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Basic
+  filter: "basic"
+- name: Language
+  filter: "language"
+- name: Container
+  filter: "container"
+- name: Others
+  filter: "others"
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Kubernetes
+  logo: /images/sections/skills/kubernetes.png
+  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
+  categories: ["container"]
+  url: "https://kubernetes.io/"
+
+- name: Artificial Intelligence
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1RSH77wJHyOn-19LI5nz8t6UlSZcvvRL7volqKaahQ&s=10
+  summary: "Using as the Python language for professional development. I build things that learn, reason, and make human-like decisions."
+  categories: ["basic", "language"]
+  url: "https://github.com/Anas436"
+
+- name: Cloud Computing
+  logo: /images/sections/skills/cloud.png
+  summary: "Works with most of the major cloud platforms, including Google Cloud Platform (GCP), Amazon Web Services (AWS), and Microsoft Azure."
+  categories: ["others"]
+
+- name: Docker
+  logo: /images/sections/skills/docker.svg
+  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+  categories: ["container"]
+  url: "https://www.docker.com/"
+
+- name: Software Development
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHLd1yYh-GA-Xqos_F29wUCeqii_Ch99mkgWE_uuXaXA&s=10
+  summary: "Experienced Python, C, Java, and JavaScript developer with strong software design and best practices."
+  categories: ["basic"]
+  url: "https://github.com/Anas436"
+
+- name: Linux
+  logo: /images/sections/skills/linux.png
+  summary: "Linux is a open-source operating system family using as main operating system and can write bash shell scripts."
+  categories: ["others"]
+
+- name: Git
+  logo: /images/sections/skills/git.png
+  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+  categories: ["basic"]
+  url: "https://git-scm.com/"
+
+- name: Python
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKalANGR8SNCz_PDAS1yjcPqHatFb1j_nLCsDYbS6Qtg&s=10
+  summary: "Know from basic to advanced Python programming. Used for contest programming, software development and problem solving."
+  categories: ["basic", "language"]
+
+- name: Java
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOzdxqtwbAV_2tpudqsTIO8NNITtpU1-i4eGvIF7lLPQ&s=10
+  summary: "Know from basic to intermediate Java programming. Used for contest programming, software development and problem solving."
+  categories: ["basic", "language"]

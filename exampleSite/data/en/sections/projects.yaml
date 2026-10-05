@@ -1,0 +1,49 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Web Application
+  filter: "Django REST Framework"
+- name: AI
+  filter: "Large Language Models"
+- name: Hobby
+  filter: "#"
+
+# your projects
+projects:
+- name: TalentLens
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS122kvOWv9ibDN4HXbPkp5JmWwQO6C_9cJNA865B_kGA&s=10
+  role: Developer
+  timeline: "2026"
+  repo: https://github.com/Anas436/TalentLens # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Production grade multi-agent AI resume screening system.
+  tags: ["Large Language Models", "Django REST Framework", "JavaScript", "Tailwind CSS"]
+
+- name: DentalCare
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVJN_pXKMK98GbnfWroD1UtYy9wGla7s5Q_D48MkdOg&s=10
+  role: Developer
+  timeline: "2026"
+  repo: https://github.com/Anas436/DentalCare
+  #url: ""
+  summary: An AI-powered multi-agent dental appointment system.
+  tags: ["Large Language Models", "Django REST Framework", "Alpine.js", "Tailwind CSS"]
+
+- name: CiteVerify
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdYhePa6fT-xjjfpxkpipu50X8KszNUjfMi9JrLPGI6g&s=10
+  role: Developer
+  timeline: "2026"
+  repo: "https://github.com/Anas436/CiteVerify"
+  summary: A multi-agent system for verifying the credibility of academic citations.
+  tags: ["Large Language Models", "Django REST Framework", "JavaScript", "Tailwind CSS"]
+

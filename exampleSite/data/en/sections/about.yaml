@@ -1,0 +1,104 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Ex-Software Engineer
+# your company information
+company:
+  name: Samsung Research
+  url: "https://research.samsung.com/"
+
+# your resume. this file path should be relative to you "static" directory
+# Dreprecated. Use resourceLinks instead.
+# resume: "files/resume.pdf"
+
+# a summary about you
+summary: "I'm a dynamic and results-driven Software Engineer dedicated to crafting cutting-edge AI solutions that impact billions of users worldwide. I collaborate with top minds to develop intelligent systems that learn, reason, and make human-like decisions, leveraging the latest advancements in AI and Software Engineering."
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "mdanasmondol43@gmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://github.com/Anas436"
+
+- name: Stackoverflow
+  icon: "fab fa-stack-overflow"
+  url: "#"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/md-anas-mondol"
+
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "#"
+
+- name: Facebook
+  icon: "fab fa-facebook"
+  url: "https://www.facebook.com/md.anas.mondol.556133/"
+
+- name: Mastadon
+  icon: "fab fa-mastodon"
+  url: "#"
+  rel: "me noopener"
+
+- name: ResearchGate
+  icon: "fab fa-researchgate"
+  url: "https://www.researchgate.net/profile/Md-Anas-Mondol?ev=hdr_xprf"
+
+# You can put custom buttons to link your relevant resources.
+# For example, you can put link for your resume.
+resourceLinks:
+- title: "My Resume"
+  url: "https://drive.google.com/file/d/1ZVufzWIIq8l14pras7ZXBnzdRVSsJHc8/view?usp=sharing"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+- type: certification
+  name: IBM AI Engineering Professional Certificate
+  url: "https://www.credly.com/earner/earned/badge/0dc6ea0a-2bcb-49b2-a333-ddfa5b2f7a1d"
+  badge: "https://images.credly.com/images/e6f51001-ef22-4ad5-91e4-f9d577fe5a2e/blob"
+
+- type: certification
+  name: IBM Data Science Professional Certificate
+  url: "https://www.credly.com/earner/earned/badge/8e779951-80f1-4576-9b95-056fb88a0d43"
+  badge: "https://images.credly.com/images/0f740f0e-52f0-4ff3-bcac-e8d2ff735c07/image.png"
+
+- type: certification
+  name: Artificial Intelligence and Machine Learning
+  url: "https://www.credly.com/earner/earned/badge/6b34445b-4715-43a1-b5b7-3921e082d0c0"
+  badge: "https://images.credly.com/images/462503e9-d76e-47ce-b82e-1d7df909ba70/Professional_Certificate_-_Data_Analyst.png"
+
+- type: soft-skill-indicator
+  name: Leadership
+  percentage: 85
+  color: blue
+
+- type: soft-skill-indicator
+  name: Team Work
+  percentage: 90
+  color: yellow
+
+- type: soft-skill-indicator
+  name: Hard Working
+  percentage: 85
+  color: orange
+
+# you can also provide color code instead of the color name
+# - type: soft-skill-indicator
+#   name: Example 1
+#   percentage: 75
+#   color: "#00adb5"

@@ -1,0 +1,38 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+- name: M.Sc. in Computer Science & Engineering
+  icon: fa-microscope
+  timeframe: 2026-2027
+  institution:
+    name: Daffodil International University, Bangladesh
+    url: "https://daffodilvarsity.edu.bd/"
+    logo: https://daffodilvarsity.edu.bd/images/logo.svg
+    # Can optionally show a different logo for dark theme
+    # darkLogo: /images/sections/education/tech_college.png
+  grade: #(optional)
+    scale: CGPA
+    achieved: 3.75
+    outOf: 4
+- name: B.Sc. in Computer Science & Engineering
+  icon: fa-graduation-cap
+  timeframe: 2019-2023
+  institution:
+    name: City University, Bangladesh
+    url: "https://www.cityuniversity.ac.bd/"
+    logo: https://www.cityuniversity.ac.bd/images/logo_all.png
+    # Can optionally show a different logo for dark theme
+    # darkLogo: /images/sections/education/university.jpg
+  grade: #(optional)
+    scale: CGPA
+    achieved: 3.57
+    outOf: 4
